@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 //! spremen da bo vredu za senzor
                 {
                     label: 'H4',
-                    borderColor: 'rgb(255, 0,0)',
+                    borderColor: 'rgb(0, 255,0)',
                     data: h4,
                     fill: false
                 }]
