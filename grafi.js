@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var pressure2 = [];
     var pressure3 = [];
     var o21 = [];
+    var methane1 = [];
     var voc1 = [];
     var X = [];
     var Y = [];
@@ -154,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 {
                     label: 'methane',
                     borderColor: 'rgb(0, 255, 255 )',
-                    data: o21,
+                    data: methane1,
                     fill: false
                 }]
         },
@@ -399,8 +400,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (json.sensors[i].id == "o2") {
                         o21.push(json.sensors[i].measured_attributes[0].data[0].o21);
                     }
-                    if (json.sensors[i].id == "o2") {
+                    if (json.sensors[i].id == "voc") {
                         voc1.push(json.sensors[i].measured_attributes[0].data[0].voc);
+                    }
+                    if (json.sensors[i].id == "methane") {
+                        methane.push(json.sensors[i].measured_attributes[0].data[0].methane);
                     }
                     if (json.sensors[i].id == "gyro") {
                         X.push(json.sensors[i].measured_attributes[0].data[0].x);
@@ -440,6 +444,8 @@ document.addEventListener('DOMContentLoaded', function () {
         o2Chart.data.labels = o21.map((_, index) => index + 1);
 
         vocChar.data.labels = voc1.map((_, index) => index + 1);
+
+        methaneChar.data.labels = methane.map((_, index) => index + 1);
 
         gyroChart.data.labels = X.map((_, index) => index + 1);
         gyroChart.data.labels = Y.map((_, index) => index + 1);

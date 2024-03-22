@@ -38,6 +38,19 @@
           ]
         }
       ]
+    }
+    ,
+    {
+      "id": "methane",
+      "measured_attributes": [
+        {
+          "data": [
+            {
+              "methane": 20.3
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "voc",
