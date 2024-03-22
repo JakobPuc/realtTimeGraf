@@ -382,10 +382,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    
+
     function updateChart() {
-        var lol = getJsonObject();
-        console.log(lol);
+        var json = getJsonObject();
+        //!temperatura
+        for (let i = 0, len = json.length-1; i < len; i++) {
+            if(json[i] == "temperature"){
+                console.log("lol");
+            } 
+        }
         setTimeout(updateChart, 1000);
     }
 
