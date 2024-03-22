@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         pressure3.push(json.sensors[i].measured_attributes[0].data[0].pressure3);
                     }
                     if (json.sensors[i].id == "o2") {
-                        o21.push(json.sensors[i].measured_attributes[0].data[0].o21);
+                        o21.push(json.sensors[i].measured_attributes[0].data[0].o2);
                     }
                     if (json.sensors[i].id == "voc") {
                         voc1.push(json.sensors[i].measured_attributes[0].data[0].voc);
