@@ -433,6 +433,49 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Error fetching JSON:', error);
             });
 
+
+        //!ce vec od n
+        var n = 100;
+        if(temperature1.length > n){
+            temperature1.shift();
+            temperature2.shift();
+        }
+        if(pressure1.length > n){
+            pressure1.shift();
+            pressure2.shift();
+            pressure3.shift();
+        }
+        if(o21.length > n){
+            o21.shift();
+        }
+        if(voc.length > n){
+            voc.shift();
+        }
+        if(methane1.length > n){
+            methane1.shift();
+        }
+        if(X.length > n){
+            X.shift();
+            Y.shift();
+            Z.shift();
+        }
+        if(X_mag.length > n){
+            X_mag.shift();
+            Y_mag.shift();
+            Z_mag.shift();
+        }
+        if(X.length > n){
+            X_acel.shift();
+            Y_acel.shift();
+            Z_acel.shift();
+        }
+        if(h1 > n){
+            h1.shift();
+            h2.shift();
+            h3.shift();
+            h4.shift();
+        }
+
         //!updating
         temperatureChart.data.labels = temperature1.map((_, index) => index + 1);
         temperatureChart.data.labels = temperature2.map((_, index) => index + 1);
