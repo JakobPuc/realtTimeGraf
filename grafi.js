@@ -400,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         o21.push(json.sensors[i].measured_attributes[0].data[0].o21);
                     }
                     if (json.sensors[i].id == "o2") {
-                        voc.push(json.sensors[i].measured_attributes[0].data[0].voc);
+                        voc1.push(json.sensors[i].measured_attributes[0].data[0].voc);
                     }
                     if (json.sensors[i].id == "gyro") {
                         X.push(json.sensors[i].measured_attributes[0].data[0].x);
