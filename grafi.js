@@ -384,15 +384,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function updateChart() {
-        var json = getJsonObject();
-        //!temperatura
-        console.log(json.sensors[0].measured_attributes[0].data[0].temperature1);
-        for (let i = 0; i < json.length; i++) {
-            console.log(json[i]);
-            /*if(json[i] == "temperature"){
-                console.log("lol");
-            } */
-        }
+        getJsonObject()
+            .then(json => {
+                console.log(json); // Log the retrieved JSON data
+                // Now you can access and manipulate the JSON data here
+                // For example:
+                console.log(json.sensors[0].id); // Accessing the first sensor's ID
+            })
+            .catch(error => {
+                console.error('Error fetching JSON:', error);
+            });
         setTimeout(updateChart, 1000);
     }
 
