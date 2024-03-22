@@ -384,13 +384,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     function updateChart() {
-        getJsonObject()
-        .then(tmp => {
-            console.log(tmp.name);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        var lol = getJsonObject();
+        console.log(lol);
         setTimeout(updateChart, 1000);
     }
 
