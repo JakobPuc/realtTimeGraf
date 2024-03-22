@@ -459,6 +459,13 @@ document.addEventListener('DOMContentLoaded', function () {
         heightChart.data.labels = h4.map((_, index) => index + 1);
 
         temperatureChart.update();
+        pressureChart.update();
+        o2Chart.update();
+        vocChar.update();
+        gyroChart.update();
+        accelerationChart.update();
+        magChart.update();
+        heightChart.update();
 
         setTimeout(updateChart, 1000);
     }
