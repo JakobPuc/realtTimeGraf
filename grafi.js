@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateChart() {
         var json = getJsonObject();
         //!temperatura
-        for (let i = 0, len = json.length-1; i < len; i++) {
+        for (let i = 0; i < json.length; i++) {
             console.log(json[i]);
             /*if(json[i] == "temperature"){
                 console.log("lol");
