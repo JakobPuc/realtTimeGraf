@@ -433,6 +433,8 @@ document.addEventListener('DOMContentLoaded', function () {
         temperatureChart.data.labels = temperature1.map((_, index) => index + 1);
         temperatureChart.data.labels = temperature2.map((_, index) => index + 1);
 
+        temperatureChart.update();
+
 
 
 
