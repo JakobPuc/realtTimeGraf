@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         vocChar.data.labels = voc1.map((_, index) => index + 1);
 
-        methaneChar.data.labels = methane.map((_, index) => index + 1);
+        methaneChar.data.labels = methane1.map((_, index) => index + 1);
 
         gyroChart.data.labels = X.map((_, index) => index + 1);
         gyroChart.data.labels = Y.map((_, index) => index + 1);
