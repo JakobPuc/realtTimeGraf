@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         voc1.push(json.sensors[i].measured_attributes[0].data[0].voc);
                     }
                     if (json.sensors[i].id == "methane") {
-                        methane.push(json.sensors[i].measured_attributes[0].data[0].methane);
+                        methane1.push(json.sensors[i].measured_attributes[0].data[0].methane);
                     }
                     if (json.sensors[i].id == "gyro") {
                         X.push(json.sensors[i].measured_attributes[0].data[0].x);
