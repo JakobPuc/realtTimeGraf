@@ -387,19 +387,56 @@ document.addEventListener('DOMContentLoaded', function () {
         getJsonObject()
             .then(json => {
                 for (let i = 0; i < 9; i++) {
-                    if(json.sensors[i].id == "temperature"){
-                        console.log(json.sensors[i].id);
-                        break;
+                    if (json.sensors[i].id == "temperature") {
+                        temperature1.push(json.sensors[i].measured_attributes[0].data[0].temperature1);
+                        temperature2.push(json.sensors[i].measured_attributes[0].data[0].temperature2);
                     }
-                    
+                    if (json.sensors[i].id == "pressure") {
+                        pressure1.push(json.sensors[i].measured_attributes[0].data[0].pressure1);
+                        pressure2.push(json.sensors[i].measured_attributes[0].data[0].pressure2);
+                        pressure3.push(json.sensors[i].measured_attributes[0].data[0].pressure3);
+                    }
+                    if (json.sensors[i].id == "o2") {
+                        o21.push(json.sensors[i].measured_attributes[0].data[0].o21);
+                    }
+                    if (json.sensors[i].id == "o2") {
+                        voc.push(json.sensors[i].measured_attributes[0].data[0].voc);
+                    }
+                    if (json.sensors[i].id == "gyro") {
+                        X.push(json.sensors[i].measured_attributes[0].data[0].x);
+                        Y.push(json.sensors[i].measured_attributes[0].data[0].y);
+                        Z.push(json.sensors[i].measured_attributes[0].data[0].z);
+                    }
+                    if (json.sensors[i].id == "acceleration") {
+                        X_acel.push(json.sensors[i].measured_attributes[0].data[0].x);
+                        Y_acel.push(json.sensors[i].measured_attributes[0].data[0].y);
+                        Z_acel.push(json.sensors[i].measured_attributes[0].data[0].z);
+                    }
+                    if (json.sensors[i].id == "magnet") {
+                        X_mag.push(json.sensors[i].measured_attributes[0].data[0].x);
+                        Y_mag.push(json.sensors[i].measured_attributes[0].data[0].y);
+                        Z_mag.push(json.sensors[i].measured_attributes[0].data[0].z);
+                    }
+                    if (json.sensors[i].id == "height") {
+                        h1.push(json.sensors[i].measured_attributes[0].data[0].h1);
+                        h2.push(json.sensors[i].measured_attributes[0].data[0].h2);
+                        h3.push(json.sensors[i].measured_attributes[0].data[0].h3);
+                        h4.push(json.sensors[i].measured_attributes[0].data[0].h4);
+                    }
                 }
             })
             .catch(error => {
                 console.error('Error fetching JSON:', error);
             });
 
-            //!updating
-            console.log(temperature1);
+        //!updating
+        temperatureChart.data.labels = temperature1.map((_, index) => index + 1);
+        temperatureChart.data.labels = temperature2.map((_, index) => index + 1);
+        temperatureChart.data.labels = temperature3.map((_, index) => index + 1);
+
+
+
+
         setTimeout(updateChart, 1000);
     }
 
