@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //!height
-    var magChart = new Chart(height, {
+    var heightChart = new Chart(height, {
         type: 'line',
         data: {
             labels: [],
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         temperature1.push(json.sensors[i].measured_attributes[0].data[0].temperature1);
                         temperature2.push(json.sensors[i].measured_attributes[0].data[0].temperature2);
                     }
-                    /*if (json.sensors[i].id == "pressure") {
+                    if (json.sensors[i].id == "pressure") {
                         pressure1.push(json.sensors[i].measured_attributes[0].data[0].pressure1);
                         pressure2.push(json.sensors[i].measured_attributes[0].data[0].pressure2);
                         pressure3.push(json.sensors[i].measured_attributes[0].data[0].pressure3);
@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         h2.push(json.sensors[i].measured_attributes[0].data[0].h2);
                         h3.push(json.sensors[i].measured_attributes[0].data[0].h3);
                         h4.push(json.sensors[i].measured_attributes[0].data[0].h4);
-                    }*/
+                    }
                 }
             })
             .catch(error => {
@@ -433,10 +433,32 @@ document.addEventListener('DOMContentLoaded', function () {
         temperatureChart.data.labels = temperature1.map((_, index) => index + 1);
         temperatureChart.data.labels = temperature2.map((_, index) => index + 1);
 
+        pressureChart.data.labels = pressure1.map((_, index) => index + 1);
+        pressureChart.data.labels = pressure2.map((_, index) => index + 1);
+        pressureChart.data.labels = pressure3.map((_, index) => index + 1);
+
+        o2Chart.data.labels = o21.map((_, index) => index + 1);
+
+        vocChar.data.labels = voc1.map((_, index) => index + 1);
+
+        gyroChart.data.labels = X.map((_, index) => index + 1);
+        gyroChart.data.labels = Y.map((_, index) => index + 1);
+        gyroChart.data.labels = Z.map((_, index) => index + 1);
+
+        accelerationChart.data.labels = X_acel.map((_, index) => index + 1);
+        accelerationChart.data.labels = Y_acel.map((_, index) => index + 1);
+        accelerationChart.data.labels = Z_acel.map((_, index) => index + 1);
+
+        magChartChart.data.labels = X_mag.map((_, index) => index + 1);
+        magChartChart.data.labels = Y_mag.map((_, index) => index + 1);
+        magChartChart.data.labels = Z_mag.map((_, index) => index + 1);
+
+        heightChart.data.labels = h1.map((_, index) => index + 1);
+        heightChart.data.labels = h2.map((_, index) => index + 1);
+        heightChart.data.labels = h3.map((_, index) => index + 1);
+        heightChart.data.labels = h4.map((_, index) => index + 1);
+
         temperatureChart.update();
-
-
-
 
         setTimeout(updateChart, 1000);
     }
