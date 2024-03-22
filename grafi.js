@@ -386,10 +386,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateChart() {
         getJsonObject()
             .then(json => {
-                for (let i = 0; i < 1; i++) {
-                    if (json.sensors[0].id == "temperature") {
-                        temperature1.push(json.sensors[0].measured_attributes[0].data[0].temperature1);
-                        temperature2.push(json.sensors[0].measured_attributes[0].data[0].temperature2);
+                for (let i = 0; i < json.sensors.length; i++) {
+                    if (json.sensors[i].id == "temperature") {
+                        temperature1.push(json.sensors[i].measured_attributes[0].data[0].temperature1);
+                        temperature2.push(json.sensors[i].measured_attributes[0].data[0].temperature2);
                     }
                     /*if (json.sensors[i].id == "pressure") {
                         pressure1.push(json.sensors[i].measured_attributes[0].data[0].pressure1);
