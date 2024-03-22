@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         temperature1.push(json.sensors[i].measured_attributes[0].data[0].temperature1);
                         temperature2.push(json.sensors[i].measured_attributes[0].data[0].temperature2);
                     }
-                    if (json.sensors[i].id == "pressure") {
+                    /*if (json.sensors[i].id == "pressure") {
                         pressure1.push(json.sensors[i].measured_attributes[0].data[0].pressure1);
                         pressure2.push(json.sensors[i].measured_attributes[0].data[0].pressure2);
                         pressure3.push(json.sensors[i].measured_attributes[0].data[0].pressure3);
@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         h2.push(json.sensors[i].measured_attributes[0].data[0].h2);
                         h3.push(json.sensors[i].measured_attributes[0].data[0].h3);
                         h4.push(json.sensors[i].measured_attributes[0].data[0].h4);
-                    }
+                    }*/
                 }
             })
             .catch(error => {
