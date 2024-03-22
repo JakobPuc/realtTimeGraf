@@ -1,38 +1,108 @@
 {
   "sensors": [
     {
-      "id": "o2-sensor",
-      "friendly_name": "Oxygen sensor",
+      "id": "temperature",
       "measured_attributes": [
         {
-          "name": "oxygen_concentration",
-          "range_min": 0,
-          "range_max": 10,
-          "unit": "%",
           "data": [
             {
-              "timestamp_measured": 1709217572,
-              "timestamp_recieved": 1709217572,
-              "value": 20.3
+              "temperature1": 20.3,
+              "temperature2": 10.3
             }
           ]
         }
       ]
     },
     {
-      "id": "o2-sensor_2",
-      "friendly_name": "Oxygen sensor",
+      "id": "pressure",
       "measured_attributes": [
         {
-          "name": "oxygen_concentration",
-          "range_min": 0,
-          "range_max": 10,
-          "unit": "%",
           "data": [
             {
-              "timestamp_measured": 1709217572,
-              "timestamp_recieved": 1709217572,
-              "value": 20.3
+              "pressure1": 20.3,
+              "pressure2": 10.3,
+              "pressure3": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "measured_attributes": [
+        {
+          "data": [
+            {
+              "o2": 20.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voc",
+      "measured_attributes": [
+        {
+          "data": [
+            {
+              "voc": 20.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gyro",
+      "measured_attributes": [
+        {
+          "data": [
+            {
+              "x": 20.3,
+              "y": 10.3,
+              "z": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acceleration",
+      "measured_attributes": [
+        {
+          "data": [
+            {
+              "x": 20.3,
+              "y": 10.3,
+              "z": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnet",
+      "measured_attributes": [
+        {
+          "data": [
+            {
+              "x": 20.3,
+              "y": 10.3,
+              "z": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "height",
+      "measured_attributes": [
+        {
+          "data": [
+            {
+              "": 20.3,
+              "h2": 10.3,
+              "h3": 0.3,
+              "h4": 0.3
             }
           ]
         }
