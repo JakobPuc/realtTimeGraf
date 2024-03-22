@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
             datasets: [
                 //! spremen da bo vredu za senzor
                 {
-                    label: 'o2',
+                    label: 'methane',
                     borderColor: 'rgb(0, 255, 255 )',
                     data: o21,
                     fill: false
