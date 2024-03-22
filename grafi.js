@@ -449,9 +449,9 @@ document.addEventListener('DOMContentLoaded', function () {
         accelerationChart.data.labels = Y_acel.map((_, index) => index + 1);
         accelerationChart.data.labels = Z_acel.map((_, index) => index + 1);
 
-        magChartChart.data.labels = X_mag.map((_, index) => index + 1);
-        magChartChart.data.labels = Y_mag.map((_, index) => index + 1);
-        magChartChart.data.labels = Z_mag.map((_, index) => index + 1);
+        magChart.data.labels = X_mag.map((_, index) => index + 1);
+        magChart.data.labels = Y_mag.map((_, index) => index + 1);
+        magChart.data.labels = Z_mag.map((_, index) => index + 1);
 
         heightChart.data.labels = h1.map((_, index) => index + 1);
         heightChart.data.labels = h2.map((_, index) => index + 1);
