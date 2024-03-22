@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Now you can access and manipulate the JSON data here
                 // For example:
                 //console.log(json.sensors[0].id); // Accessing the first sensor's ID
-                temperature1.push(json.sensors[0].measured_attributes[0].temperature1);
+                temperature1.push(json.sensors[0].measured_attributes[0].data[0].temperature1);
             })
             .catch(error => {
                 console.error('Error fetching JSON:', error);
