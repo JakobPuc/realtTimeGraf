@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //!acel
-    var accelerationChart = new Chart(gyro, {
+    var accelerationChart = new Chart(acceleration, {
         type: 'line',
         data: {
             labels: [],
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //!Mag
-    var accelerationChart = new Chart(gyro, {
+    var magChart = new Chart(magnet, {
         type: 'line',
         data: {
             labels: [],
@@ -331,8 +331,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    //!Higfht
-    var accelerationChart = new Chart(gyro, {
+    //!height
+    var magChart = new Chart(height, {
         type: 'line',
         data: {
             labels: [],
