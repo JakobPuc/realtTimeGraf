@@ -1,0 +1,23 @@
+{
+    "sensors": [
+        {
+          "id": "o2-sensor",
+          "friendly_name": "Oxygen sensor",
+          "measured_attributes": [
+            {
+              "name": "oxygen_concentration",
+              "range_min": 0,
+              "range_max": 10,
+              "unit": "%",
+              "data": [
+                 {
+                    "timestamp_measured": 1709217572,
+                    "timestamp_recieved": 1709217572,
+                    "value": 20.3
+                 } 
+              ]
+            }
+          ]
+        }
+      ]
+    }
