@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function () {
         getJsonObject()
             .then(json => {
                 for (let i = 0; i < 9; i++) {
-                    if (json.sensors[i].id == "temperature") {
+                    if (json.sensors[0].id == "temperature") {
                         temperature1.push(json.sensors[i].measured_attributes[0].data[0].temperature1);
                         temperature2.push(json.sensors[i].measured_attributes[0].data[0].temperature2);
                     }
