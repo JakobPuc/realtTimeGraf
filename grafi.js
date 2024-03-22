@@ -382,6 +382,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    
+    function updateChart() {
+        getJsonObject()
+        .then(tmp => {
+            console.log(tmp.name);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+        setTimeout(updateChart, 1000);
+    }
+
+    // Start the continuous update
+    updateChart();
 
 
 });
