@@ -472,6 +472,7 @@ document.addEventListener('DOMContentLoaded', function () {
         accelerationChart.update();
         magChart.update();
         heightChart.update();
+        methaneChar.update();
 
         setTimeout(updateChart, 1000);
     }
