@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateChart() {
         getJsonObject()
             .then(json => {
-                for (let i = 0; i < 9; i++) {
+                for (let i = 0; i < 1; i++) {
                     if (json.sensors[0].id == "temperature") {
                         temperature1.push(json.sensors[0].measured_attributes[0].data[0].temperature1);
                         temperature2.push(json.sensors[0].measured_attributes[0].data[0].temperature2);
